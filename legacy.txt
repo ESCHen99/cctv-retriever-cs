@@ -1,0 +1,4 @@
+//startInfo.Arguments = "-rtsp_transport tcp -i \"" + __rtsp + "\"" + "-f segment -segment_time " + interval + " -segment_format avi -reset_timestamps 1 -t 60 " + @"-strftime 1 -c copy -map 0 C:\Users\formaciodual\HTTP\records\Hola\%H%M%S.avi";
+
+ //"-rtsp_transport tcp -i \"" + __rtsp + "\" -f segment -segment_time "+ interval +" -segment_format avi -reset_timestamps 1 -strftime 1 - c copy - map 0 "+__path+"\\%H%M%S.avi";
+                                                                    // -rtsp_transport tcp -i "rtsp://admin:admin1234@192.168.1.107" -f segment -segment_time 10 -segment_format avi -reset_timestamps 1 -strftime 1 -c copy -map 0 test-%Y%m%d-%H%M%S.avi

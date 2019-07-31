@@ -1,0 +1,164 @@
+﻿<Window Background="LightGray" x:Class="CCTV.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:CCTV"
+        mc:Ignorable="d"
+        Title="Finestra de configurció" Height="784.54" Width="853.6">
+    <Border Padding="10">
+        <Grid>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="*"/>
+                <ColumnDefinition Width="*"/>
+            </Grid.ColumnDefinitions>
+
+            <Grid.RowDefinitions>
+
+                <RowDefinition Height="*"/>
+                <RowDefinition Height="300"/>
+                <RowDefinition Height="*"/>
+                <RowDefinition Height="*"/>
+                <RowDefinition Height="5*"/>
+                <RowDefinition Height="5*"/>
+            </Grid.RowDefinitions>
+
+            <Button x:Name="afegir" Click="Afegir_Click"  Margin="5 0 0 0" Grid.Column="1" Grid.Row="0" Content="Afegir/Editar"/>
+            <Button x:Name="treure" Click="Treure_Click" Margin="0 0 5 0" Grid.Column="0" Grid.Row="0" Content="Treure"/>
+            <Button x:Name="start" Click="Start_Click" Margin="0 -10 5 0" Grid.Column="0" Grid.Row="2" Content="Start" Background="Green" Foreground="White"/>
+            <Button x:Name="stop" Click="Stop_Click" Margin="5 -10 0 0" Grid.Column="1" Grid.Row="2" Content="Stop" Background="Red" Foreground="White"/>
+
+            <TextBox x:Name="pathBox"  IsEnabled="False" Grid.Row="3" Grid.Column="1" Margin="5 5 0 5"/>
+
+            <Button x:Name="folder" Click="Folder_Click" Margin="0 5 5 5" Content="Seleccionar directori" Grid.Row="3" Grid.Column="0"/>
+
+            <RichTextBox x:Name="stdErrCam1" Grid.Row="4" Grid.Column="0" Background="Gray" Margin="0 5 5 5"/>
+            <RichTextBox x:Name="stdErrCam2" Grid.Row="4" Grid.Column="1" Background="Gray" Margin="5 5 0 5"/>
+            <RichTextBox x:Name="stdErrCam3" Grid.Row="5" Grid.Column="0" Background="Gray" Margin="0 5 5 5"/>
+            <RichTextBox x:Name="stdErrCam4" Grid.Row="5" Grid.Column="1" Background="Gray" Margin="5 5 0 5"/>
+
+            <Grid  Grid.Row="1" Grid.Column="0">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="*"/>
+                    <ColumnDefinition Width="*"/>
+                    <ColumnDefinition Width="*"/>
+                    <ColumnDefinition Width="*"/>
+                </Grid.ColumnDefinitions>
+
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="*"/>
+                    <RowDefinition Height="*"/>
+                    <RowDefinition Height="*"/>
+                    <RowDefinition Height="*"/>
+                    <RowDefinition Height="*"/>
+                    <RowDefinition Height="*"/>
+                </Grid.RowDefinitions>
+                <Label Content="Càmera"  Grid.Row="0" Grid.Column="0"/>
+                <Label Content="IP"  Grid.Row="0" Grid.Column="1"/>
+                <Label Content="Usuari"  Grid.Row="0" Grid.Column="2"/>
+                <Label Content="Contrasenya"  Grid.Row="0" Grid.Column="3"/>
+
+                <TextBox IsEnabled="False" Margin="0 0 5 0" Background="#eee"   Grid.Row="1" Grid.Column="0" x:Name="C1"/>
+                <TextBox IsEnabled="False" Margin="0 0 5 0" Background="Red"  Grid.Row="1" Grid.Column="1" x:Name="IP1"/>
+                <TextBox IsEnabled="False" Margin="0 0 5 0" Background="#eee"  Grid.Row="1" Grid.Column="2"  x:Name="U1"/>
+                <TextBox IsEnabled="False" Margin="0 0 5 0" Background="#eee"  Grid.Row="1" Grid.Column="3"  x:Name="PASS1"/>
+
+                <TextBox IsEnabled="False" Margin="0 0 5 0" Background="#eee"   Grid.Row="2" Grid.Column="0" x:Name="C2"/>
+                <TextBox IsEnabled="False" Margin="0 0 5 0" Background="Red"  Grid.Row="2" Grid.Column="1" x:Name="IP2"/>
+                <TextBox IsEnabled="False" Margin="0 0 5 0" Background="#eee"  Grid.Row="2" Grid.Column="2"  x:Name="U2"/>
+                <TextBox IsEnabled="False" Margin="0 0 5 0" Background="#eee"  Grid.Row="2" Grid.Column="3"  x:Name="PASS2"/>
+
+                <TextBox IsEnabled="False" Margin="0 0 5 0" Background="#eee"   Grid.Row="3" Grid.Column="0" x:Name="C3"/>
+                <TextBox IsEnabled="False" Margin="0 0 5 0" Background="Red"  Grid.Row="3" Grid.Column="1" x:Name="IP3"/>
+                <TextBox IsEnabled="False" Margin="0 0 5 0" Background="#eee"  Grid.Row="3" Grid.Column="2"  x:Name="U3"/>
+                <TextBox IsEnabled="False" Margin="0 0 5 0" Background="#eee"  Grid.Row="3" Grid.Column="3"  x:Name="PASS3"/>
+
+                <TextBox IsEnabled="False" Margin="0 0 5 0" Background="#eee"   Grid.Row="4" Grid.Column="0" x:Name="C4"/>
+                <TextBox IsEnabled="False" Margin="0 0 5 0" Background="Red"  Grid.Row="4" Grid.Column="1" x:Name="IP4"/>
+                <TextBox IsEnabled="False" Margin="0 0 5 0" Background="#eee"  Grid.Row="4" Grid.Column="2"  x:Name="U4"/>
+                <TextBox IsEnabled="False" Margin="0 0 5 0" Background="#eee"  Grid.Row="4" Grid.Column="3"  x:Name="PASS4"/>
+            </Grid>
+
+
+            <StackPanel Margin="5 10 0 10" Grid.Column="1" Grid.Row="1">
+                <Label  Content="Camera"/>
+                <Grid>
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="*"/>
+                        <ColumnDefinition Width="*"/>
+                    </Grid.ColumnDefinitions>
+
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="*"/>
+                        <RowDefinition Height="*"/>
+                    </Grid.RowDefinitions>
+
+
+                    <RadioButton Margin="5 0 0 0" Grid.Column="0" Grid.Row="0" Content="Càmera 1" x:Name="cam1"/>
+                    <RadioButton Margin="0 0 5 0" Grid.Column="1" Grid.Row="0" Content="Càmera 2" x:Name="cam2"/>
+                    <RadioButton Margin="5 0 0 0" Grid.Column="0" Grid.Row="1"  Content="Càmera 3" x:Name="cam3"/>
+                    <RadioButton Margin="0 0 5 0" Grid.Column="1" Grid.Row="1"  Content="Càmera 4" x:Name="cam4"/>
+                </Grid>
+                <Label  Content="IP Adress"/>
+                <Grid>
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="*"/>
+                        <ColumnDefinition Width="0.5*"/>
+                        <ColumnDefinition Width="*"/>
+                        <ColumnDefinition Width="0.5*"/>
+                        <ColumnDefinition Width="*"/>
+                        <ColumnDefinition Width="0.5*"/>
+                        <ColumnDefinition Width="*"/>
+                    </Grid.ColumnDefinitions>
+                    <TextBox Padding="5" Margin="5 0 5 0" Grid.Column="0" x:Name="ip1"/>
+                    <Label Content="." HorizontalContentAlignment="Center" Grid.Column="1" Height="27" Margin="95,0,0.2,0" VerticalAlignment="Top"/>
+                    <TextBox Padding="5" Margin="5 0 5 0" Grid.Column="2" x:Name="ip2"/>
+                    <Label Content="." HorizontalContentAlignment="Center" Grid.Column="3" Height="27" Margin="95,0,0.2,0" VerticalAlignment="Top"/>
+                    <TextBox Padding="5" Margin="5 0 5 0" Grid.Column="4" x:Name="ip3"/>
+                    <Label Content="." HorizontalContentAlignment="Center" Grid.Column="3" Height="27" Margin="95,0,0.2,0" VerticalAlignment="Top"/>
+                    <TextBox Padding="5" Margin="5 0 5 0" Grid.Column="6" x:Name="ip4"/>
+                </Grid>
+
+
+
+                <Grid>
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="*"/>
+                        <ColumnDefinition Width="*"/>
+                    </Grid.ColumnDefinitions>
+
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="*"/>
+                        <RowDefinition Height="*"/>
+                    </Grid.RowDefinitions>
+
+                    <Label Grid.Column="0" Grid.Row="0" Content="User"/>
+                    <TextBox Padding="5" Grid.Column="0" Grid.Row="1" Margin="5 0 5 0" x:Name="user"/>
+                    <Label Grid.Column="1" Grid.Row="0" Content="Password"/>
+                    <PasswordBox Padding="5" Grid.Column="1" Grid.Row="1" Margin="5 0 5 0" x:Name="pass"/>
+                </Grid>
+                <Label Content="Hora inici i final GLOBAL"/>
+                <Grid>
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="*"/>
+                        <ColumnDefinition Width="*"/>
+                    </Grid.ColumnDefinitions>
+
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="*"/>
+                        <RowDefinition Height="*"/>
+                        <RowDefinition Height="*"/>
+                        <RowDefinition Height="*"/>
+                    </Grid.RowDefinitions>
+                    <Label Content="Inici"  Grid.Column="0" Grid.Row="0"/>
+                    <TextBox Padding="5" Grid.Column="0" Grid.Row="1" Margin="5 0 5 0" x:Name="ini"/>
+                    <Label Content="Final"  Grid.Column="2" Grid.Row="0"/>
+                    <TextBox Padding="5" Grid.Column="2" Grid.Row="1" Margin="5 0 5 0" x:Name="end"/>
+                    <Button Content="Set/Update"  Grid.Column="2" Grid.Row="3" Margin="50 10 5 0" x:Name="update" Click="Update_Click"/>
+                </Grid>
+
+            </StackPanel>
+
+        </Grid>
+    </Border>
+</Window>

@@ -1,0 +1,16 @@
+C:\Users\formaciodual\Desktop\CCTV\CCTV\bin\Debug\CCTV.exe.config
+C:\Users\formaciodual\Desktop\CCTV\CCTV\bin\Debug\CCTV.exe
+C:\Users\formaciodual\Desktop\CCTV\CCTV\bin\Debug\CCTV.pdb
+C:\Users\formaciodual\Desktop\CCTV\CCTV\obj\Debug\CCTV.csprojAssemblyReference.cache
+C:\Users\formaciodual\Desktop\CCTV\CCTV\obj\Debug\MainWindow.g.cs
+C:\Users\formaciodual\Desktop\CCTV\CCTV\obj\Debug\App.g.cs
+C:\Users\formaciodual\Desktop\CCTV\CCTV\obj\Debug\CCTV_MarkupCompile.cache
+C:\Users\formaciodual\Desktop\CCTV\CCTV\obj\Debug\CCTV_MarkupCompile.lref
+C:\Users\formaciodual\Desktop\CCTV\CCTV\obj\Debug\MainWindow.baml
+C:\Users\formaciodual\Desktop\CCTV\CCTV\obj\Debug\CCTV.g.resources
+C:\Users\formaciodual\Desktop\CCTV\CCTV\obj\Debug\CCTV.Properties.Resources.resources
+C:\Users\formaciodual\Desktop\CCTV\CCTV\obj\Debug\CCTV.csproj.GenerateResource.cache
+C:\Users\formaciodual\Desktop\CCTV\CCTV\obj\Debug\CCTV.csproj.CoreCompileInputs.cache
+C:\Users\formaciodual\Desktop\CCTV\CCTV\obj\Debug\CCTV.exe
+C:\Users\formaciodual\Desktop\CCTV\CCTV\obj\Debug\CCTV.pdb
+C:\Users\formaciodual\Desktop\CCTV\CCTV\obj\Debug\CCTV_Content.g.cs
